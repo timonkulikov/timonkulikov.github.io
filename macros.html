@@ -8,14 +8,39 @@
 
   <body>
     <h1>Изученные нами макросы:</h1>
+  <ul type="circle">
+  <li>Макрос копирования:</li>
+<ul type="disc">
+  <br>
+<li>Копирует заданный текст и впоследствие позволяет мгновенно напечатать кусок текста любой длины.</li>
+<br>
+<li>If Worksheets(ActiveSheet.Name).Name = "Лист1" 
+<p>Then
+    ActiveCell.FormulaR1C1 = "mindless self indulgence "</p>
+    <p>End If</p>
+    <p>End Sub</p> </li>
+</ul>
+ 
+  <li>Макрос замены:</li>
+  <ul type="disc">
+    <br>
+<li>Заменяет все заданные элементы на другие заданные элементы во всем документе.</li>
+<br>
+<li>
+  <p>Cells.Replace What:="23", Replacement:="56", LookAt:=xlPart, SearchOrder _
+        :=xlByRows, MatchCase:=False, SearchFormat:=False, ReplaceFormat:=False</p>
+<p>End Sub</p> </li>
+</ul>
+  <li>Макрос форматирования текста:</li>
+  <ul type="disc">
+    <br>
+<li>Применяет заданное форматирование к тексту.</li>
+<br>
+<li> Selection.Font.Bold = True
+    Selection.Font.Italic = True
+<p>End Sub</p>
+</li>
+</ul>
+  </ul>
     
     
-    
-    
-    
-    
-    
-    
-  </body>
-
-</html>
