@@ -36,6 +36,14 @@
       position: fixed;
       top: 260;
     }
+    .need_left4 {
+      position: fixed;
+      top: 340;
+    }
+     .need_left5 {
+      position: fixed;
+      top: 420;
+    }
     
     .neon {
       top: 30;
@@ -96,7 +104,7 @@
       var c = a*b 
       a = c*a
       a=a*a;
-      document.getElementById("inf1").textContent = "А) a^3=" + c + " a^10=" + a;
+      document.getElementById("inf1").textContent = "А) a^3 = " + c + " a^10 = " + a;
       var a = Number(document.getElementById("var_in").value);
       var b = a;
       a = a * a 
@@ -104,19 +112,43 @@
       a = c*b
       a=a*a;
       a=a*a
-      document.getElementById("inf2").textContent = "Б) a^4=" + c + " a^20=" + a;
+      document.getElementById("inf2").textContent = "Б) a^4 = " + c + " a^20 = " + a;
       var a = Number(document.getElementById("var_in").value);
       var b = a;
       a = a * a 
       a= a * a
-      var c = a*b 
-      a = c*b
-      a=a*a;
-      a=a*a
-      document.getElementById("inf3").textContent = "В) a^5=" + c + " a^13=" + a;
-     
-
-
+      var c = a * b
+      var d = a
+      a = c * d * d
+      document.getElementById("inf3").textContent = "В) a^5 = " + c + " a^13 = " + a;
+      var a = Number(document.getElementById("var_in").value);
+      var b = a;
+      a = a * a 
+      a= a * a
+      var d = a
+      var c = a * b
+      var e = c * c * c * d
+      
+      document.getElementById("inf4").textContent = "Г) a^5 = " + c + " a^19 = " + e;
+      var a = Number(document.getElementById("var_in").value);
+      var b = a;
+      a = a * a 
+      var c = a
+      a= a * a
+      var d = a * b
+      var e = d * d * d * c
+      document.getElementById("inf5").textContent = "Д) a^2 = " + c + " a^5 = " + d + " a^17 = " + e;
+      var a = Number(document.getElementById("var_in").value);
+      a = a * a
+      var b = a
+      a = a * a
+      var c = a
+      a = c * b
+      var d = a * a
+      a = d * b
+      var e = a * a
+      document.getElementById("inf6").textContent = "Е) a^4 = " + c + " a^12 = " + d + " a^28 = " + e;
+      
     }
   </script>
 </head>
@@ -150,13 +182,27 @@
       <span class="spotlight"></span>
     </div>
   </div>
+  <div class="need_left4">
+    <div class="neon">
+      <span class="text" data-text="" id="inf5"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+  <div class="need_left5">
+    <div class="neon">
+      <span class="text" data-text="" id="inf6"></span>
+      <span class="gradient"></span>
+      <span class="spotlight"></span>
+    </div>
+  </div>
+  
 
   <button onclick="er()">1.61</button>
   <input type="text" value="" id="var_in">
 </body>
 
 </html>
-
 
 
 
