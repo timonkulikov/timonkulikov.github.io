@@ -83,11 +83,18 @@
       document.getElementById("inf1").innerHTML = "десятков " + (ab - ab % 10) / 10 + "<br>единиц " + ab % 10 + "<br>их сумма=" + (ab % 10 + (ab - ab % 10) / 10) + "<br>их произведение=" + (ab % 10 * (ab - ab % 10) / 10);
     }
     
-    
+    function er1() {
+      var ab = Number (document.getElementById("var_in").value);
+      document.getElementById("inf4").innerHTML = "сотен " + (ab - ab % 100) / 100 +
+       "<br>десятков " + (ab - ab % 10) / 10 +
+       "<br>единиц " + ab % 10 + 
+       "<br>их сумма=" + (ab % 10 + (ab - ab % 10) / 10 + (ab-ab%100)/100) + 
+       "<br>их произведение=" + ((ab % 10 * (ab - ab % 10) / 10 * (ab-ab%100)/100) / 10);
+    }
 
-    function er3() {
+    function er2() {
       var ab = document.getElementById("var_in").value;
-      document.getElementById("inf4").textContent = ab + "ABCDEFG";
+      document.getElementById("inf3").textContent = ab + "ABCDEFG";
     }
   </script>
 </head>
@@ -95,7 +102,7 @@
 <body>
   <a class="button8" onclick="er()">2.10</a>
   <a class="button8" onclick="er1()">2.12</a>
-  <a class="button8" onclick="er3()">Любая</a>
+  <a class="button8" onclick="er2()">Любая</a>
   <div class="layer1">
     <input type="text" value="57" id="var_in">
     <br>
@@ -115,4 +122,3 @@
 </body>
 
 </html>
-
