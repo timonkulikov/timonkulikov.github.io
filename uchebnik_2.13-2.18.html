@@ -1,0 +1,168 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <title>Стили</title>
+  <style>
+    @font-face {
+      font-family: "Porcelain";
+      src: url(https://timonkulikov.github.io/17381.ttf);
+    }
+    
+    body {
+      display: inline-block;
+      flex-wrap: wrap;
+      align-content: space-between;
+      overflow: hidden;
+    
+    }
+    
+    .gradient {
+      text-align: right;
+      font-size: 30px;
+      font-family: Porcelain;
+      letter-spacing: 5px;
+    }
+    
+    .spotlight {
+      background: linear-gradient(to right, #FF0000, #000000);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: rainbow_animation 3s ease-in-out infinite;
+      background-size: 400% 100%;
+    }
+    
+    @keyframes rainbow_animation {
+      0%, 100% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 100% 0;
+      }
+    }
+    
+    a.button8 {
+      display: inline-block;
+      padding: 0.2em 1.45em;
+      margin: 0.1em;
+      border: 0.15em solid #CCCCCC;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Porcelain';
+      font-weight: 400;
+      color: #000000;
+      background-color: #CCCCCC;
+      text-align: center;
+      position: relative;
+    }
+    
+    a.button8:hover {
+      border-color:#ffd700 ;
+      position: relative;
+    }
+    
+    a.button8:active {
+      background-color: #999999;
+      position: relative;
+    }
+    
+    @media all and (max-width:30em) {
+      a.button8 {
+        display: block;
+        margin: 0.4em auto;
+      }
+      .layer1 {
+        position: fixed;
+      }
+    }
+  </style>
+  <script>
+    function er() {
+      var ab = Number (document.getElementById("var_in").value);
+      var ab1 = (ab - ab % 100) / 100
+      var ab2 = (ab - ab % 10) / 10
+      var ab3 = ab % 10
+      document.getElementById("inf1").innerHTML = "2.13:" + ab3 + ab2 + ab1
+    }
+    
+    function er1() {
+      var ab = Number (document.getElementById("var_in").value);
+      var ab1 = (ab - ab % 100) / 100
+      var ab2 = (ab - ab % 10) / 10
+      var ab3 = ab % 10
+      document.getElementById("inf2").innerHTML = "2.14:" + ab2 + ab3 + ab1
+       
+    }
+
+    function er2() {
+      var ab = Number (document.getElementById("var_in").value);
+      var ab1 = (ab - ab % 100) / 100
+      var ab2 = (ab - ab % 10) / 10
+      var ab3 = ab % 10
+      document.getElementById("inf3").innerHTML = "2.15:" + ab3 + ab1 + ab2
+    }
+
+    function er3() {
+      var ab = Number (document.getElementById("var_in").value);
+      var ab1 = (ab - ab % 100) / 100
+      var ab2 = (ab - ab % 10) / 10
+      var ab3 = ab % 10
+      document.getElementById("inf4").innerHTML = "2.16:" + ab2 + ab1 + ab3
+    }
+
+    function er4() {
+      var ab = Number (document.getElementById("var_in").value);
+      var ab1 = (ab - ab % 100) / 100
+      var ab2 = (ab - ab % 10) / 10
+      var ab3 = ab % 10
+      document.getElementById("inf5").innerHTML = "2.17:" + ab1 + ab3 + ab2
+    }
+
+    function er5() {
+      var ab = Number (document.getElementById("var_in").value);
+      var ab1 = (ab - ab % 100) / 100
+      var ab2 = (ab - ab % 10) / 10
+      var ab3 = ab % 10
+      document.getElementById("inf6").innerHTML = "2.18:" + ab1 + ab2 + ab3 + "<br>" + ab1 + ab3 + ab2 + "<br>" + ab2 + ab1 + ab3 + "<br>" + ab2 + ab3 + ab1 + "<br>" + ab3 + ab1 + ab2 + "<br>" +ab3 + ab2 + ab1
+    }
+
+
+  </script>
+</head>
+
+<body>
+  <a class="button8" onclick="er()">2.13</a>
+  <a class="button8" onclick="er1()">2.14</a>
+  <a class="button8" onclick="er2()">2.15</a>
+  <a class="button8" onclick="er3()">2.16</a>
+  <a class="button8" onclick="er4()">2.17</a>
+  <a class="button8" onclick="er5()">2.18</a>
+  <div class="layer1">
+    <input type="text" value="57" id="var_in">
+    <br>
+  </div>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf1"></div>
+  </div>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf2"></div>
+  </div>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf3"></div>
+  </div>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf4"></div>
+  </div>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf5"></div>
+  </div>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf6"></div>
+  </div>
+  <div class="gradient">
+    <div class="spotlight" data-text="" id="inf7"></div>
+  </div>
+</body>
+
+</html>
