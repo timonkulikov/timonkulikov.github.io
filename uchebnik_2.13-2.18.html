@@ -81,15 +81,15 @@
     function er() {
       var ab = Number (document.getElementById("var_in").value);
       var ab1 = (ab - ab % 100) / 100
-      var ab2 = (ab - ab % 10) / 10
+      var ab2 = ((ab % 100) - (ab % 100) % 10) / 10
       var ab3 = ab % 10
-      document.getElementById("inf1").innerHTML = "2.13:" + ab3 + ab2 + ab1
+      document.getElementById("inf1").innerHTML = "<br>2.13:" + ab3 + ab2 + ab1
     }
     
     function er1() {
       var ab = Number (document.getElementById("var_in").value);
       var ab1 = (ab - ab % 100) / 100
-      var ab2 = (ab - ab % 10) / 10
+      var ab2 = ((ab % 100) - (ab % 100) % 10) / 10
       var ab3 = ab % 10
       document.getElementById("inf2").innerHTML = "2.14:" + ab2 + ab3 + ab1
        
@@ -98,7 +98,7 @@
     function er2() {
       var ab = Number (document.getElementById("var_in").value);
       var ab1 = (ab - ab % 100) / 100
-      var ab2 = (ab - ab % 10) / 10
+      var ab2 = ((ab % 100) - (ab % 100) % 10) / 10
       var ab3 = ab % 10
       document.getElementById("inf3").innerHTML = "2.15:" + ab3 + ab1 + ab2
     }
@@ -106,7 +106,7 @@
     function er3() {
       var ab = Number (document.getElementById("var_in").value);
       var ab1 = (ab - ab % 100) / 100
-      var ab2 = (ab - ab % 10) / 10
+      var ab2 = ((ab % 100) - (ab % 100) % 10) / 10
       var ab3 = ab % 10
       document.getElementById("inf4").innerHTML = "2.16:" + ab2 + ab1 + ab3
     }
@@ -114,7 +114,7 @@
     function er4() {
       var ab = Number (document.getElementById("var_in").value);
       var ab1 = (ab - ab % 100) / 100
-      var ab2 = (ab - ab % 10) / 10
+      var ab2 = ((ab % 100) - (ab % 100) % 10) / 10
       var ab3 = ab % 10
       document.getElementById("inf5").innerHTML = "2.17:" + ab1 + ab3 + ab2
     }
@@ -122,7 +122,7 @@
     function er5() {
       var ab = Number (document.getElementById("var_in").value);
       var ab1 = (ab - ab % 100) / 100
-      var ab2 = (ab - ab % 10) / 10
+      var ab2 = ((ab % 100) - (ab % 100) % 10) / 10
       var ab3 = ab % 10
       document.getElementById("inf6").innerHTML = "2.18:" + ab1 + ab2 + ab3 + "<br>" + ab1 + ab3 + ab2 + "<br>" + ab2 + ab1 + ab3 + "<br>" + ab2 + ab3 + ab1 + "<br>" + ab3 + ab1 + ab2 + "<br>" +ab3 + ab2 + ab1
     }
@@ -139,7 +139,7 @@
   <a class="button8" onclick="er4()">2.17</a>
   <a class="button8" onclick="er5()">2.18</a>
   <div class="layer1">
-    <input type="text" value="57" id="var_in">
+    <input type="text" value="123" id="var_in">
     <br>
   </div>
   <div class="gradient">
