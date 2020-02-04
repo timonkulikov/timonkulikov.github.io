@@ -1,0 +1,116 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Стили</title>
+<style>
+table {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+border-collapse: collapse;
+text-align: center;
+}
+th{
+background: #AFCDE7;
+color: white;
+padding: 10px 20px;
+}
+th, td {
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: white;
+}
+td {
+background: #D8E6F3;
+}
+
+</style>
+<script>
+function Clean() {
+
+document.getElementById("myTable").innerHTML="";
+
+}
+var c = 0
+var temp = ""
+var temp2 = ""
+
+flag =0
+
+
+function CreateRow() {
+var y = document.createElement("TR");
+y.setAttribute("id", temp);
+document.getElementById("myTable").appendChild(y);
+
+}
+function CreateRow2() {
+var y = document.createElement("TR");
+y.setAttribute("id", temp2);
+document.getElementById("myTable").appendChild(y);
+
+}
+function CreateRow3() {
+var y = document.createElement("TR");
+y.setAttribute("id", temp3);
+document.getElementById("myTable").appendChild(y);
+
+}
+
+function CreateTable() {
+var x = document.createElement("TABLE");
+x.setAttribute("id", "myTable");
+document.body.appendChild(x);
+}
+
+function er() {
+temp = "Tr1_" + c
+temp2 = "Tr2_" + c
+
+c++
+if (flag ==0){CreateTable()}
+
+CreateRow()
+flag=1
+var b = Number(document.getElementById("in1").value);
+for (var i = 10; i <= b; i++) {
+var z1 = document.createElement("TH");
+var t = document.createTextNode(i);
+z1.appendChild(t);
+document.getElementById(temp).appendChild(z1);
+}
+
+CreateRow2()
+var b = Number(document.getElementById("in1").value);
+for (var i = 10; i <= 25; i++) {
+var z2 = document.createElement("TD");
+example = Math.sqrt(i);
+var l = document.createTextNode(i+0.4);
+z2.appendChild(l);
+document.getElementById(temp2).appendChild(z2);
+
+}
+
+
+
+
+
+
+
+}
+</script>
+</head>
+
+<body>
+<button onclick="er()">5.4 а)</button>
+<button onclick="Clean()">Стереть таблицу</button>
+<br>
+<br> А)
+<input type="text" value="25" id="in1">
+<br>
+<br>
+<div id="inf1"></div>
+
+</body>
+
+</html>
